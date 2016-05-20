@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Agar Extension",
+	"description": "Adds new features to agar.io",
+	"version": "2.0",
+	"author": "Muzaffer Aksoy",
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"http://agar.io/",
+		"declarativeContent"
+	]
+}
