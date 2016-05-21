@@ -3,7 +3,6 @@
 var _x_input;
 var _x_chatWebsocket;
 // _x_end
-$( "#canvas" ).after( "<div style='background-color: #000000; -moz-opacity: 0.3; -khtml-opacity: 0.3; opacity: 0.3; filter: alpha(opacity=90); zoom: 1; width: 550px; top: 3px; left: 3px; display: block; position: absolute; text-align: left; font-size: 15px; color: #ffffff; padding: 5px; font-family: Ubuntu;'> <div style='color:#ffffff; display: inline; -moz-opacity:1; -khtml-opacity: 1; opacity:1; filter:alpha(opacity=100); padding: 10px;'><a>Q</a> = Seri W Atma &nbsp;&nbsp;&nbsp;<a>A</a> = 4'lü Bölünme &nbsp;&nbsp;&nbsp;<a>S</a> = Hücre Durdur &nbsp;&nbsp;&nbsp;<a>D</a> = 16'lı Bölünme </div>" );
 
 (function(a, c) {
     function r(a, d) {
