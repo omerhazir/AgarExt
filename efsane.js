@@ -1,6 +1,7 @@
 // 676
 // _x_start
 var _x_input;
+var _x_chatWebsocket;
 // _x_end
 
 (function(a, c) {
@@ -22,14 +23,10 @@ var _x_input;
         return null
     }
 
-    function O() {
-        c.get(P + "//gc.agar.io", function(a) {
-            var d = a.split(" ");
-            a = d[0];
-            d = d[1] || "";
-            q.hasOwnProperty(a) && ("string" == typeof q[a] ? MC.getRegion() || MC.setRegion(q[a]) : q[a].hasOwnProperty(d) && (MC.getRegion() || MC.setRegion(q[a][d])))
-        }, "text")
-    }
+
+    else {
+
+
 		// _x_start
 		$(function() {
             _x_canvas = document.getElementById("canvas");
@@ -40,5 +37,9 @@ var _x_input;
 			$("#reconnect").click(function() {
                 MC.reconnect()
             })
+			/*
+			*/
+        })
+		// _x_end
    }
 })(window, window.jQuery);
