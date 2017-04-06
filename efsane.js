@@ -1,6 +1,6 @@
 // 676
 // _x_start
-var _x_input;
+//var _x_input;
 //var _x_chatWebsocket;
 // _x_end
 (function(a, c) {
