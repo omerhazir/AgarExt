@@ -3,7 +3,7 @@
 var _x_input;
 var _x_chatWebsocket;
 // _x_end
-
+//ws://ip-151-80-98-61.tech.agar.io:1516?
 (function(a, c) {
     function r(a, d) {
         if (d) {
@@ -23,14 +23,14 @@ var _x_chatWebsocket;
         return null
     }
 
-    function O() {
+    /*function O() {
         c.get(P + "//gc.agar.io", function(a) {
             var d = a.split(" ");
             a = d[0];
             d = d[1] || "";
             q.hasOwnProperty(a) && ("string" == typeof q[a] ? MC.getRegion() || MC.setRegion(q[a]) : q[a].hasOwnProperty(d) && (MC.getRegion() || MC.setRegion(q[a][d])))
         }, "text")
-    }
+    }*/
 		// _x_start
 		$(function() {
             _x_canvas = document.getElementById("canvas");
