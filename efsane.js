@@ -1,9 +1,8 @@
 // 676
 // _x_start
 var _x_input;
-var _x_chatWebsocket;
+//var _x_chatWebsocket;
 // _x_end
-//ws://ip-151-80-98-61.tech.agar.io:1516?
 (function(a, c) {
     function r(a, d) {
         if (d) {
