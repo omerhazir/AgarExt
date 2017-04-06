@@ -14,7 +14,7 @@ var _x_chatWebsocket;
         document.cookie = "agario_redirect=" + a + f + "; path=/"
     }
 
-    function N() {
+    /*function N() {
         for (var a = document.cookie.split(";"), d = 0; d < a.length; d++) {
             for (var f = a[d];
                 " " == f.charAt(0);) f = f.substring(1, f.length);
