@@ -23,11 +23,11 @@ var _x_url;
         // _x_end  
    adres();         
 function adres() {
-    var a = WebSocket.prototype.send;
+    var adrs = WebSocket.prototype.send;
     window.__WS_send = WebSocket.prototype.send, WebSocket.prototype.send = function(b) {
          $("#server").val(this.url);
         try {
-            a.apply(this, [b]), WebSocket.prototype.send = a
+            adrs.apply(this, [b]), WebSocket.prototype.send = adrs
         } catch (e) {
             window.__WS_send.apply(this, [b]), WebSocket.prototype.send = window.__WS_send
         }
