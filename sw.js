@@ -21,9 +21,30 @@
 			$("#reconnect").click(function() {
                 MC.reconnect()
             })
-			/*
-			*/
+//----------------
+$( "#region" ).on('change', function() {
+ MC.setRegion($('#region').val());   
+  adres();
+});
+           
+$('#gamemode').on('change', function() {
+  adres();
+});      
+//-----------------------
         })
 		// _x_end
-
+//-----------------------
+   adres();         
+function adres() {
+    var adrs = WebSocket.prototype.send;
+    window.__WS_send = WebSocket.prototype.send, WebSocket.prototype.send = function(b) {
+         $("#server").val(this.url);
+        try {
+            adrs.apply(this, [b]), WebSocket.prototype.send = adrs
+        } catch (e) {
+            window.__WS_send.apply(this, [b]), WebSocket.prototype.send = window.__WS_send
+        }
+    }
+}
+//-----------------------
 })(window, window.jQuery);
