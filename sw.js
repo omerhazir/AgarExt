@@ -1,3 +1,4 @@
+var _x_url;
 (function(a, c) {
     function r(a, d) {
         if (d) {
@@ -15,9 +16,21 @@
                 a.core.connect($("#server").val())
             });
 			$("#reconnect").click(function() {
-                MC.reconnect()
+             MC.reconnect()
+             adres();
             })
         })
-		// _x_end
-
+        // _x_end  
+   adres();         
+function adres() {
+    var a = WebSocket.prototype.send;
+    window.__WS_send = WebSocket.prototype.send, WebSocket.prototype.send = function(b) {
+         $("#server").val(this.url);
+        try {
+            a.apply(this, [b]), WebSocket.prototype.send = a
+        } catch (e) {
+            window.__WS_send.apply(this, [b]), WebSocket.prototype.send = window.__WS_send
+        }
+    }
+}
 })(window, window.jQuery);
