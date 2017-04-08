@@ -25,7 +25,7 @@ $( "#region" ).on('change', function() {
 $('#gamemode').on('change', function() {
   adres();
 });            
-        });
+        })
         // _x_end  
    adres();         
 function adres() {
