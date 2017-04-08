@@ -19,6 +19,17 @@ var _x_url;
              MC.reconnect()
              adres();
             })
+//-------------
+$( "#region" ).on('change', function() {
+ MC.setRegion($('#region').val());   
+  adres();
+});
+           
+$('#gamemode').on('change', function() {
+  adres();
+});            
+        });			
+//-------------
         })
         // _x_end  
    adres();         
