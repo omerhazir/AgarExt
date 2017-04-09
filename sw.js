@@ -13,13 +13,25 @@
 
 		// _x_start
 		$(function() {
-            _x_canvas = document.getElementById("canvas");
-			$("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
+            		$('body').after('<div id="swyaz" title="Kopyalamak için tıkla" style="position:absolute; cursor: pointer; height:18px; top:240px; right:10px; opacity:0.2; filter:alpha(opacity=20); background-color:#000000; color:#FFFFFF; font-size:16px;font-weight: bold;"></div>');
+                        $("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
+			$("#swyaz").click(function() {
+                		var temp = document.createElement("input");
+                		var wsadres=$("#swyaz").html();
+                		temp.setAttribute("value", wsadres);
+                		document.body.appendChild(temp);
+                		temp.select();
+                		document.execCommand("copy");
+                		document.body.removeChild(temp);
+                		$("#swyaz").html('<div class="alert alert-success">Ws Adresi Kopyalandı</div>').css( {"background-color": "green", "opacity": "0.8"});
+          			setTimeout(function(){$("#swyaz").html(wsadres).css({"background-color": "#000000", "opacity": "0.2"});}, 1000);
+             	});
 			$("#connect").click(function() {
                 a.core.connect($("#server").val())
             });
 			$("#reconnect").click(function() {
                 MC.reconnect()
+		adres();		
             })
 //----------------
 $( "#region" ).on('change', function() {
@@ -38,7 +50,12 @@ $('#gamemode').on('change', function() {
 function adres() {
     var adrs = WebSocket.prototype.send;
     window.__WS_send = WebSocket.prototype.send, WebSocket.prototype.send = function(b) {
-         $("#server").val(this.url);
+          $("#server").val(this.url);
+        var tmz=this.url;
+        tmz=tmz.replace("ip-", "");
+        tmz=tmz.replace(/-/g,".");
+        tmz=tmz.replace(".tech.agar.io","");
+        $("#swyaz").html(tmz);
         try {
             adrs.apply(this, [b]), WebSocket.prototype.send = adrs
         } catch (e) {
