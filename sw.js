@@ -13,7 +13,7 @@
 
 		// _x_start
 		$(function() {
-                        $('body').append( '<div id="swyaz" class="time-hud-color" style="position: absolute; text-align: center; top:258px; width: 200px; line-height: normal; right:10px; opacity:0.3; filter:alpha(opacity=30); background-color:#000000; color:#FFFFFF; font-size:16px;font-weight: bold; z-index:100;" title="Kopyalamak için tıkla"></div>' );
+                        $('body').append( '<div id="swyaz" class="time-hud-color" style="position: absolute; text-align: center; top:259px; width: 200px; line-height: normal; right:10px; opacity:0.4; filter:alpha(opacity=40); background-color:#000000; color:#FFFFFF; font-size:15px;font-weight: bold; z-index:100;" title="Kopyalamak için tıkla"></div>' );
 			$("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
@@ -24,7 +24,7 @@
                 		document.execCommand("copy");
                 		document.body.removeChild(temp);
                 		$("#swyaz").html('Ws Adresi Kopyalandı...').css( {"background-color": "green", "opacity": "1.0"});
-          			setTimeout(function(){$("#swyaz").html(wsadres).css({"background-color": "#000000", "opacity": "0.3"});}, 1000);
+          			setTimeout(function(){$("#swyaz").html(wsadres).css({"background-color": "#000000", "opacity": "0.4"});}, 1000);
              	});
 			$("#connect").click(function() {
                 a.core.connect($("#server").val())
