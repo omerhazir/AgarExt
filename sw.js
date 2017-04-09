@@ -14,12 +14,12 @@
 		// _x_start
 		$(function() {
                         $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; text-align: center; top:262px; width: 200px; height:18px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size:15px; font-weight: bold; z-index:200;" title="Kopyalamak için tıkla"></div>' );
-			$("#gamemode").after('<br><br><br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
+			$("#gamemode").after('<div style="padding-top: 25px;"></div><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
                 		var wsadres=$("#swyaz").html();
                 		temp.setAttribute("value", wsadres);
-                		document.body.appendChild(temp);
+                		document.body.appendC<hild(temp);
                 		temp.select();
                 		document.execCommand("copy");
                 		document.body.removeChild(temp);
