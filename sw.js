@@ -23,7 +23,7 @@
                 		temp.select();
                 		document.execCommand("copy");
                 		document.body.removeChild(temp);
-                		$("#swyaz").html('<div class="alert alert-success">Ws Adresi Kopyalandı</div>').css( {"background-color": "green", "opacity": "0.8"});
+                		$("#swyaz").html('Ws Adresi Kopyalandı...').css( {"background-color": "green", "opacity": "0.8"});
           			setTimeout(function(){$("#swyaz").html(wsadres).css({"background-color": "#000000", "opacity": "0.2"});}, 1000);
              	});
 			$("#connect").click(function() {
