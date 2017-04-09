@@ -13,7 +13,7 @@
 
 		// _x_start
 		$(function() {
-                        $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; text-align: center; top:262px; width: 200px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size: 75%; font-weight: 700; z-index:200;" title="Kopyalamak için tıkla"></div>' );
+                        $('body').append( '<div id="swyaz" class="hud-main-color" style="position: absolute; text-align: center; top:262px; width: 200px; line-height: normal; right:10px; background-color: rgba(0, 0, 0, .5); font-size:15px; font-weight: bold; z-index:200;" title="Kopyalamak için tıkla"></div>' );
 			$("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
