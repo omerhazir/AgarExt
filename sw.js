@@ -14,7 +14,7 @@
 		// _x_start
 		$(function() {
             		$('.leaderboard-panel').after('<div id="swyaz" title="Kopyalamak için tıkla" style="cursor: pointer;"></div>');
-                        $( "#leaderboard-hud" ).append( "<div>deneme</div>" );
+                        $( "#statsTimeLeaderboardContainer" ).append( "<div>deneme</div>" );
 			$("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
