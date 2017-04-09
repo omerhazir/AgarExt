@@ -13,7 +13,7 @@
 
 		// _x_start
 		$(function() {
-            		$('body').after('<div id="swyaz" title="Kopyalamak için tıkla" style="position:absolute; cursor: pointer; height:18px; top:240px; right:10px; opacity:0.2; filter:alpha(opacity=20); background-color:#000000; color:#FFFFFF; font-size:16px;font-weight: bold;"></div>');
+            		$('body').after('<div id="swyaz" title="Kopyalamak için tıkla" style="position:absolute; cursor: pointer; height:20px; top:280px; right:10px; opacity:0.2; filter:alpha(opacity=20); background-color:#000000; color:#FFFFFF; font-size:16px;font-weight: bold;"></div>');
                         $("#gamemode").after('<br><br><input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
