@@ -1,4 +1,4 @@
-Agar.io Eklentisi
+Agar.io Eklentisi <br>
 Bu Eklenti ile agario kullanıcı paneline; 
 1-Server Ws Adresi ile bağlanma bölümü
 2-Server yenileme butonu 
