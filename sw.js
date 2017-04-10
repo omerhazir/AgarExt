@@ -19,12 +19,12 @@
                 		var temp = document.createElement("input");
                 		var wsadres=$("#swyaz").html();
                 		temp.setAttribute("value", wsadres);
-                		document.body.appendC<hild(temp);
+                		document.body.appendChild(temp);
                 		temp.select();
                 		document.execCommand("copy");
                 		document.body.removeChild(temp);
                 		$("#swyaz").html('WS Adresi Kopyalandı').css( {"background-color": "green", "opacity": "1.0"});
-          			setTimeout(function(){}, 1000);
+          			setTimeout(function(){$("#swyaz").html(wsadres).css("background-color", "rgba(0, 0, 0, .5)");}, 1000);
              	});
 			$("#connect").click(function() {
                 a.core.connect($("#server").val())
