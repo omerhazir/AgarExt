@@ -13,7 +13,8 @@
 
 		// _x_start
 		$(function() {
-                        $('<h5 id="swyaz" class="hud-main-color" style="cursor:pointer; position: absolute; z-index:1000; font-size: 16px; text-align: center;" title="Kopyalamak için tıkla"></h5>').appendTo('.leaderboard-panel');
+                        $('<h5 id="swyaz" class="hud-main-color" style="cursor:pointer; position: absolute; z-index:1000; font-size: 16px; text-align: center;" title="Kopyalamak için tıkla"></h5>').appendTo('#leaderboard-hud');
+$('.leaderboard-panel').html('<style>.leaderboard-panel{width: 85px;height: 300px;}#skinz{display: inline-block;-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75); -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75); box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);cursor:pointer;width:50px;height:50px;maRgin:2px;border-radius:100000000px;}</style> <div id="skinz" style="opacity: 1;" class="1"></div> <div id="skinz" style="opacity: 1;" class="2"></div> <div id="skinz" style="opacity: 1;" class="3"></div><div id="skinz" style="opacity: 1;" class="4"></div><div id="skinz" style="opacity: 1;" class="5"></div>');			
 			$("#gamemode").after('<input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
