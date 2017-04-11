@@ -13,11 +13,11 @@
 
 		// _x_start
 		$(function() {
-                        $('<h4 id="swyaz" class="hud-main-color" style="cursor:pointer; text-align: center;" title="Kopyalamak için tıkla"></h4>').appendTo('#leaderboard-hud');
+                        $('<h4>IP:</h4><h4 id="swyaz" class="hud-main-color" style="cursor:pointer; text-align: center;" title="Kopyalamak için tıkla"></h4>').appendTo('#leaderboard-hud');
 			$("#gamemode").after('<input id="server" class="form-control" style="width: 59%;  display: inline-block; margin-right: 5px"><button type="submit" id="connect" class="btn btn-primary" style="width: 25%; display: inline-block; margin-right: 5px">Connect</button><button type="button" id="reconnect" class="btn btn-info" style="display: inline-block"><i class="glyphicon glyphicon-refresh"></i></button>');
 			$("#swyaz").click(function() {
                 		var temp = document.createElement("input");
-                		var wsadres=$("#swyaz").html();
+                		var wsadres="ws://" + $("#swyaz").html();
                 		temp.setAttribute("value", wsadres);
                 		document.body.appendChild(temp);
                 		temp.select();
@@ -52,8 +52,9 @@ function adres() {
     window.__WS_send = WebSocket.prototype.send, WebSocket.prototype.send = function(b) {
           $("#server").val(this.url);
         var tmz=this.url;
-        tmz=tmz.replace("ip-", "");
-        tmz=tmz.replace(/-/g,".");
+        tmz=tmz.replace("ws://ip-", "");
+        tmz=tmz.replace("/", "");
+        tmz=tmz.replace(/-/g,".");    
         tmz=tmz.replace(".tech.agar.io","");
         $("#swyaz").html(tmz);
         try {
