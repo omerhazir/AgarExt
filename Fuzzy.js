@@ -5,7 +5,8 @@ function keydown(event) {
  // Triplesplit Z
     if (event.keyCode == 68) {
         ilikedick();
-        setTimeout(ilikedick, imlost*3);
+        setTimeout(ilikedick, imlost);
+        setTimeout(ilikedick, imlost*2);
     }
 }
 
